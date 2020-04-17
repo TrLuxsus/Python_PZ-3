@@ -49,8 +49,11 @@ def main():
     wrk1.walk()
     wrk1.walk()
     wrk1.dance()
-    
-    print(wrk1, wrk1.age, wrk1.name, ves)
+
+    for i in range(1, 9):
+        wrk1.work()
+
+    print(wrk1, wrk1.age, wrk1.name, ves, wrk1.get_mood())
 
 
 if __name__ == "__main__":
