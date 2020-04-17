@@ -25,6 +25,7 @@ def main():
 
     wrk1.eat(2)
     wrk1.eat(3)
+    wrk1.eat(15)
     ves = wrk1.get_weight()
 
     print(wrk1, wrk1.age, wrk1.name, ves)
