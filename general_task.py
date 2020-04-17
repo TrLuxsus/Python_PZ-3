@@ -2,6 +2,7 @@ class Worker:
     age = 0
     name = ""
     __weight = 0
+    __mood = 10
 
     #Method eat increaces weight of the worker 
     #if eaten maore than 10 kgs weight increased in half and age increased by 1
@@ -15,6 +16,22 @@ class Worker:
     #Get weight of the worker
     def get_weight(self):
         return self.__weight
+
+    #Increase mood by 1
+    def walk(self):
+        self.__mood += 1
+    
+    #Increase mood by 2
+    def dance(self):
+        self.__mood += 2
+
+    #Reduce mood by 2
+    def work(self):
+        self.__mood -= 2
+
+    #Get mood of the worker
+    def get_mood(self):
+        return self.__mood
 
 
 #Test script
