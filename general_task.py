@@ -25,9 +25,11 @@ class Worker:
     def dance(self):
         self.__mood += 2
 
-    #Reduce mood by 2
+    #Reduce mood by 2 wesut won't be negative
     def work(self):
         self.__mood -= 2
+        if self.__mood < 0:
+            self.__mood = 0
 
     #Get mood of the worker
     def get_mood(self):
