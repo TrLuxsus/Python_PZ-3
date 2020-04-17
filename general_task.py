@@ -4,8 +4,13 @@ class Worker:
     __weight = 0
 
     #Method eat increaces weight of the worker 
+    #if eaten maore than 10 kgs weight increased in half and age increased by 1
     def eat(self, how_much):
-        self.__weight += how_much
+        if how_much > 10:
+            self.age += 1
+            self.__weight += how_much / 2
+        else:
+            self.__weight += how_much
 
     #Get weight of the worker
     def get_weight(self):
