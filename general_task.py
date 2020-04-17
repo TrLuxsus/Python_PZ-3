@@ -3,13 +3,16 @@ class Worker:
     name = ""
     __weight = 0
 
+    #Method eat increaces weight of the worker 
     def eat(self, how_much):
         self.__weight += how_much
 
+    #Get weight of the worker
     def get_weight(self):
         return self.__weight
 
 
+#Test script
 def main():
     wrk1 = Worker ()
     wrk1.age = 34
