@@ -20,8 +20,8 @@ class Worker:
 #Test script
 def main():
     wrk1 = Worker ()
-    wrk1.age = 34
-    wrk1.name = "Иванов"
+    wrk1.age = int(input("Enter worker age:"))
+    wrk1.name = input("Enter worker name:")
 
     wrk1.eat(2)
     wrk1.eat(3)
