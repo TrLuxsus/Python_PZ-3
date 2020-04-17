@@ -45,6 +45,11 @@ def main():
     wrk1.eat(15)
     ves = wrk1.get_weight()
 
+    wrk1.walk()
+    wrk1.walk()
+    wrk1.walk()
+    wrk1.dance()
+    
     print(wrk1, wrk1.age, wrk1.name, ves)
 
 
