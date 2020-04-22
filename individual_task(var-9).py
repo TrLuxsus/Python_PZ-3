@@ -13,7 +13,7 @@ class EquilateralTriangle:
     __base = 0
     __side = 0
 
-    
+
     # Геттер основания
     def get_base(self):
         return self.__base
@@ -59,3 +59,21 @@ class EquilateralTriangle:
             return False
         else:
             self.__side = side
+
+    # Увеличение размера на процент
+    def increase(self, percent):
+        if percent <= 0:
+            print("Процент должен быть больше 0")
+            return False
+        else:
+            self.__base += self.__base * percent / 100
+            self.__side += self.__side * percent / 100
+
+    # Уменьшение размера на процент
+    def reduce(self, percent):
+        if 0 <= percent == 100:
+            print("Процент должен быть больше 0 и меньше 100")
+            return False
+        else:
+            self.__base -= self.__base * percent / 100
+            self.__side -= self.__side * percent / 100
