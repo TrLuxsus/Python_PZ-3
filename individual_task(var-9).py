@@ -125,3 +125,60 @@ class EquilateralTriangle:
             return False
         else:
             return round(180 - 2 * self.angle_base(), 2)
+
+
+def main():
+    triangle = EquilateralTriangle()
+    print("Основание при инициализации: ", triangle.get_base())
+    print("Бедро при инициализации: ", triangle.get_side())
+
+    # Попытка установки некоректных значений
+    triangle.set_base("три")
+    triangle.set_side("четыре")
+    triangle.set_base(-2)
+    triangle.set_side(0)
+
+    # Проверка неравенства треугольника
+    triangle.set_base(5)
+    triangle.set_side(1)
+
+    # Проверка вазова методов на треугольнике с неопределенными сторонами
+    triangle.perimeter()
+    triangle.angle_base()
+    triangle.median_to_base()
+
+    # Проверка вазова методов на полностью заданом реугольнике
+    triangle.set_side(10)
+    print("Тетсовый треугольник основание: ", triangle.get_base())
+    print("Тетсовый треугольник бедро: ", triangle.get_side())
+
+    # Попытка удаления через уменьшение сторон до 0
+    triangle.reduce(100)
+
+    print("До изменений размера основание: ", triangle.get_base())
+    print("До изменений размера бедро: ", triangle.get_side())
+
+    print("Уменьшаем в 2 раза")
+    triangle.reduce(0)
+    triangle.reduce(50)
+
+    print("Размер основания: ", triangle.get_base())
+    print("Размер бедра: ", triangle.get_side())
+
+    print("Увеличиваем в 3 раза")
+    triangle.increase(-200)
+    triangle.increase(200)
+
+    print("После изменеий размера основание: ", triangle.get_base())
+    print("После изменеий размера бедро: ", triangle.get_side())
+
+    print("Периметр: ", triangle.perimeter())
+    print("Площадь: ", triangle.area())
+    print("Медиана к основанию: ", triangle.median_to_base())
+    print("Медиана к бедру: ", triangle.median_to_side())
+    print("Углы при основании: ", triangle.angle_base())
+    print("Угол при вершине: ", triangle.angle_top())
+
+
+if __name__ == '__main__':
+    main()
