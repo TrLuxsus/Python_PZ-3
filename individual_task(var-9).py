@@ -77,3 +77,19 @@ class EquilateralTriangle:
         else:
             self.__base -= self.__base * percent / 100
             self.__side -= self.__side * percent / 100
+
+    # Медиана к основанию
+    def median_to_base(self):
+        if self.__side == 0 or self.__base == 0:
+            print("Задайте все стороны")
+            return False
+        else:
+            return round(((math.sqrt(4*pow(self.__side, 2) - 2*pow(self.__base, 2))) / 2), 2)
+
+    # Медиана к бедру
+    def median_to_side(self):
+        if self.__side == 0 or self.__base == 0:
+            print("Задайте все стороны")
+            return False
+        else:
+            return round(((math.sqrt(2 * pow(self.__base, 2))) / 2), 2)
