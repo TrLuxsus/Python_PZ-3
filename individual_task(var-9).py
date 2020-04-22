@@ -93,3 +93,19 @@ class EquilateralTriangle:
             return False
         else:
             return round(((math.sqrt(2 * pow(self.__base, 2))) / 2), 2)
+
+    # Периметр
+    def perimeter(self):
+        if self.__side == 0 or self.__base == 0:
+            print("Задайте все стороны")
+            return False
+        else:
+            return self.__base + self.__side * 2
+
+    # Площадь
+    def area(self):
+        if self.__side == 0 or self.__base == 0:
+            print("Задайте все стороны")
+            return False
+        else:
+            return round(self.__base * self.median_to_base() / 2, 2)
